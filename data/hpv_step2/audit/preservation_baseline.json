@@ -1,0 +1,33 @@
+{
+  "purpose": "Baseline hashes of original inputs and unrelated repository files; no sequence analysis.",
+  "files": {
+    ".gitignore": "557384e5a8bcd3baa893a3ea4f3cc5fd84929c50c82464e714cac09902ac0e3a",
+    "data/gencode.v50.lncRNA_transcripts.fa.gz": "0f49f602b9536a15beb9a159cd5b947468872e10944fb689e378ea458ef0e027",
+    "data/gencode.v50.long_noncoding_RNAs.gff3.gz": "b7cf36f89d5448ecb9d9794d870c7840b41e5fb3d16df2abf41950214173b1f1",
+    "data/gencode.v50.long_noncoding_RNAs.gtf.gz": "88ef3d23a2d6cf3422e188a4d5506ba5386b2c05283a99c916794b5cf9f2b6bf",
+    "data/gencode.v50.transcripts.fa.gz": "5a320f524d73b5793518eb19b118829033713443d0f42af20a67bb31cc06cf56",
+    "data/HPV16_E6/md5sum.txt": "8a3697a3457a0d3fed8645465e271bb1a9dea15f81a876762455989e9b06b6eb",
+    "data/HPV16_E6/ncbi_dataset/data/data_report.jsonl": "12dcfbe66119ef2b5c47c44d28d0072aa5405ed489a5f87fb3b148561095b538",
+    "data/HPV16_E6/ncbi_dataset/data/dataset_catalog.json": "22026aebb3bd1f37a10feacc3f62a32cc85bf2bb08588eb7539be129a9cece09",
+    "data/HPV16_E6/ncbi_dataset/data/gene.fna": "7fa0e41336bc09f4b5b2215e0895e184d2b00d6e5115254a3f6d3b749b5f85c6",
+    "data/HPV16_E6/ncbi_dataset/data/product_report.jsonl": "465c3e3e48759c109a61d717f4f755f210019d17defc255fe0115f1175561a3c",
+    "data/HPV16_E6/README.md": "793d502c7f0dae8a87dd503c8d81ea56730cb3376c1d96597a38da5e7a9e8e88",
+    "data/HPV16_E7/md5sum.txt": "e18f0958167134d1d20b93bf5cc2cddf3775848a456c62cf438ccb919e51cda7",
+    "data/HPV16_E7/ncbi_dataset/data/data_report.jsonl": "4ff6a39e34fdfc37875e3000795f42af40a82589ee9be08f1def0b0d7e032e64",
+    "data/HPV16_E7/ncbi_dataset/data/dataset_catalog.json": "1903c7a0240755e9dba3d863e035e9eebdfed2ae2dfcba24cb0ae3749e1bd46e",
+    "data/HPV16_E7/ncbi_dataset/data/gene.fna": "4b539a9b77845cda44c374c1eab0512e88881172bc9951c4aeae309cb83a6440",
+    "data/HPV16_E7/ncbi_dataset/data/product_report.jsonl": "d80d9a2f09b6a46e62e69f0bc83187ab797ff07bb67c6cb0f2f0ffb4b50e54e3",
+    "data/HPV16_E7/README.md": "793d502c7f0dae8a87dd503c8d81ea56730cb3376c1d96597a38da5e7a9e8e88",
+    "README.md": "cfe1817e2ce9c33b561c6fb1331d9943126209487fdcd8e5b622da35bf2c2244",
+    "requirements.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/all_transcript_checks.csv": "93efa8a700851e1f1103b3cbc59bcb409d9f3d8b876d1f42ab1e29ffe1588bb4",
+    "results/HPV16_E6_checks.csv": "9a18d36b780f32d8fb460d974fc023d5c942da819360ed865bd686b940c9927c",
+    "results/HPV16_E7_checks.csv": "259ff59201ed30cb6e1edc18a767212f5d24e460fd2c58d89b487baed0abb483",
+    "results/lncrna_checks.csv": "6d39a6a8bab81ae1d891cab2ceb63e340d1281607ef2ce0cb0c56bbedc61376a",
+    "src/config_code/read.py": "36647070282303a6e18e150e0064a8267b5f9ce1e1ddef279ddb654756f5f4cf",
+    "src/config_code/read_sequences.py": "ea297ede6f2fb0e5991f0785d9051d71d4cfc2433e60303e7bc4f6c67dbf29c3",
+    "src/config_code/Relation.py": "b6e98ad7c3772b26c477d33200fadd3a17edd8fd184d98ff37654ce4341c2be4",
+    "src/main.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TESTING/.gitkeep": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  }
+}

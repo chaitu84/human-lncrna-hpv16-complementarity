@@ -1,0 +1,796 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-06T03:35:04.109773+00:00",
+  "offline": true,
+  "independent_of_builder": true,
+  "method": "Standalone standard-library verifier; 1-based coordinate enumeration; no builder import",
+  "scope": "HPV Step 2 only; reference and target sequence verification",
+  "limitations": [
+    "Offline verification checks the included references and outputs; it does not fetch NCBI or reread papers.",
+    "The published junction and analysis boundaries are supplied evidence; literature provenance is audited separately.",
+    "The same source references support both scripts; independent computation does not replace external accession verification.",
+    "These partial target regions establish neither complete transcript ends nor RNA binding or HPV suppression."
+  ],
+  "reference_identity": {
+    "NC_FASTA": "NC_001526.4 Human papillomavirus type 16, complete genome",
+    "K_FASTA": "K02718.1 Human papillomavirus type 16 (HPV16), complete genome",
+    "GenBank_VERSION": "NC_001526.4",
+    "GenBank_ORIGIN_matches_FASTA": true
+  },
+  "mapping": {
+    "query": "K02718.1:83-858",
+    "length_nt": 776,
+    "matched_interval": "NC_001526.4:7125-7900",
+    "offset": 7042,
+    "offset_scope": "Only the verified E6/E7 alignment; not genome-wide",
+    "exhaustive_exact_matches_by_strand": {
+      "linear": {
+        "+": [
+          7125
+        ],
+        "-": []
+      },
+      "circular": {
+        "+": [
+          7125
+        ],
+        "-": []
+      }
+    }
+  },
+  "genbank_spliced_feature": {
+    "type": "CDS",
+    "location": "join(7125..7268,7451..7459)",
+    "qualifiers": {
+      "gene": "E6",
+      "locus_tag": "HpV16gp1",
+      "experiment": "EXISTENCE:",
+      "note": "Spliced. E6*. Function is not known yet.",
+      "codon_start": "1",
+      "product": "protein E6*",
+      "protein_id": "YP_009268707.1",
+      "db_xref": "GeneID:1489078",
+      "translation": "MHQKRTAMFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQL LRREVY"
+    }
+  },
+  "original_inputs": {
+    "E6": {
+      "path": "HPV16_E6/ncbi_dataset/data/gene.fna",
+      "length_nt": 477,
+      "raw_file_sha256": "7fa0e41336bc09f4b5b2215e0895e184d2b00d6e5115254a3f6d3b749b5f85c6"
+    },
+    "E7": {
+      "path": "HPV16_E7/ncbi_dataset/data/gene.fna",
+      "length_nt": 297,
+      "raw_file_sha256": "4b539a9b77845cda44c374c1eab0512e88881172bc9951c4aeae309cb83a6440"
+    }
+  },
+  "targets": {
+    "HPV16_E6E7_intron_retained_region": {
+      "length_nt": 755,
+      "retained_intervals_1based_inclusive": "7146-7900",
+      "dna_sequence_sha256": "0ff121295b914f17857727fce4c7700afe3bfb02b1cbefbfdb4da53686ce8e95",
+      "rna_sequence_sha256": "9d6a0794c72836168bac407f12473990412300d9c324b88aff31fefa30c2d924",
+      "e7_target_interval_1based_inclusive": "459-755",
+      "e7_complete": true,
+      "dna_rna_same_target": true
+    },
+    "HPV16_E6starI_E7_spliced_region": {
+      "length_nt": 573,
+      "retained_intervals_1based_inclusive": "7146-7268;7451-7900",
+      "dna_sequence_sha256": "d20bba2a580f9af14293371f9097a56aa10caa952314d8dc5059b96c05e9c392",
+      "rna_sequence_sha256": "12e46e52dd426eb2b358137e96337bf85f0ac4a5a60059e184c76fcb5816b39f",
+      "e7_target_interval_1based_inclusive": "277-573",
+      "e7_complete": true,
+      "dna_rna_same_target": true
+    }
+  },
+  "splice": {
+    "retained_reference_bases": [
+      7268,
+      7451
+    ],
+    "removed_interval": "7269-7450",
+    "removed_length_nt": 182,
+    "target_junction_between_bases": [
+      123,
+      124
+    ],
+    "junction_context_DNA": "CAGTTACTGCGACGTGAG|GTGTATTAACTGTCAAAAGC"
+  },
+  "checks": [
+    {
+      "check": "FASTA header: NC_001526.4.fasta",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: NC_001526.4.fasta",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGT: NC_001526.4.fasta",
+      "passed": true
+    },
+    {
+      "check": "FASTA header: K02718.1.fasta",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: K02718.1.fasta",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGT: K02718.1.fasta",
+      "passed": true
+    },
+    {
+      "check": "NC FASTA accession.version NC_001526.4",
+      "passed": true
+    },
+    {
+      "check": "Conventional FASTA accession.version K02718.1",
+      "passed": true
+    },
+    {
+      "check": "Both FASTA headers identify HPV16",
+      "passed": true
+    },
+    {
+      "check": "Reference lengths: NC 7906 nt and K 7904 nt",
+      "passed": true
+    },
+    {
+      "check": "GenBank VERSION NC_001526.4",
+      "passed": true
+    },
+    {
+      "check": "GenBank LOCUS: 7906-bp circular DNA",
+      "passed": true
+    },
+    {
+      "check": "GenBank ORIGIN present",
+      "passed": true
+    },
+    {
+      "check": "GenBank ORIGIN equals NC FASTA base for base",
+      "passed": true
+    },
+    {
+      "check": "GenBank source identifies HPV16 genomic DNA",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6 gene plus-strand 7125..7601",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6 CDS plus-strand 7125..7601",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6 product transforming protein E6",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6 CDS codon_start=1: 7125..7601",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6 CDS plus-strand join(7125..7268,7451..7459)",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6 product protein E6*",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6 CDS codon_start=1: join(7125..7268,7451..7459)",
+      "passed": true
+    },
+    {
+      "check": "GenBank E6* feature explicitly described as spliced CDS",
+      "passed": true
+    },
+    {
+      "check": "GenBank E7 gene plus-strand 7604..7900",
+      "passed": true
+    },
+    {
+      "check": "GenBank E7 CDS plus-strand 7604..7900",
+      "passed": true
+    },
+    {
+      "check": "GenBank E7 product transforming protein E7",
+      "passed": true
+    },
+    {
+      "check": "GenBank E7 CDS codon_start=1: 7604..7900",
+      "passed": true
+    },
+    {
+      "check": "Mapping query length: 776 nt",
+      "passed": true
+    },
+    {
+      "check": "Exhaustive linear search: unique plus match at 7125, no minus match",
+      "passed": true
+    },
+    {
+      "check": "Exhaustive circular search: unique plus match at 7125, no minus match",
+      "passed": true
+    },
+    {
+      "check": "K02718.1:83..858 equals NC_001526.4:7125..7900 exactly",
+      "passed": true
+    },
+    {
+      "check": "Derived local offset +7042",
+      "passed": true
+    },
+    {
+      "check": "Mapped analysis, splice and E7 coordinates within verified local alignment",
+      "passed": true
+    },
+    {
+      "check": "Removed interval: 182 nt with GT/AG reference intron boundaries",
+      "passed": true
+    },
+    {
+      "check": "Analysis starts at conventional 104 / NC 7146 ATG",
+      "passed": true
+    },
+    {
+      "check": "Annotated E6* CDS terminates at 7459 with TAA",
+      "passed": true
+    },
+    {
+      "check": "FASTA header: gene.fna",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: gene.fna",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGT: gene.fna",
+      "passed": true
+    },
+    {
+      "check": "Original E6 accession, gene name and coordinates",
+      "passed": true
+    },
+    {
+      "check": "Original E6 equals independently enumerated reference interval",
+      "passed": true
+    },
+    {
+      "check": "FASTA header: gene.fna",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: gene.fna",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGT: gene.fna",
+      "passed": true
+    },
+    {
+      "check": "Original E7 accession, gene name and coordinates",
+      "passed": true
+    },
+    {
+      "check": "Original E7 equals independently enumerated reference interval",
+      "passed": true
+    },
+    {
+      "check": "Native full E7: 297 nt with ATG start and TAA stop",
+      "passed": true
+    },
+    {
+      "check": "Two native bases TC between annotated E6 and E7 retained",
+      "passed": true
+    },
+    {
+      "check": "Expected target length: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Independently reconstructed target agrees in both reference coordinate systems: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "FASTA header: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGT: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target identifier: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header reference: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header strand: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header retained_1based: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header partial_transcript_region: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header alphabet: HPV16_E6E7_intron_retained_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target DNA sequence equals independent coordinate enumeration: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "FASTA header: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGU: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target identifier: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header reference: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header strand: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header retained_1based: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header partial_transcript_region: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header alphabet: HPV16_E6E7_intron_retained_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target RNA sequence equals independent coordinate enumeration: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Full E7 preserved at expected target position: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Native E7 stop included in DNA/RNA representations: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Expected target length: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Independently reconstructed target agrees in both reference coordinate systems: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "FASTA header: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGT: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target identifier: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header reference: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header strand: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header retained_1based: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header partial_transcript_region: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header alphabet: HPV16_E6starI_E7_spliced_region.dna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target DNA sequence equals independent coordinate enumeration: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "FASTA header: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "One FASTA record: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "FASTA alphabet ACGU: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target identifier: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header reference: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header strand: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header retained_1based: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header partial_transcript_region: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target header alphabet: HPV16_E6starI_E7_spliced_region.rna.fasta",
+      "passed": true
+    },
+    {
+      "check": "Target RNA sequence equals independent coordinate enumeration: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Full E7 preserved at expected target position: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Native E7 stop included in DNA/RNA representations: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Spliced junction lies between target bases 123 and 124",
+      "passed": true
+    },
+    {
+      "check": "Spliced junction sequence context",
+      "passed": true
+    },
+    {
+      "check": "Metadata contains exactly the two biological targets",
+      "passed": true
+    },
+    {
+      "check": "Metadata reference: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata strand: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata retained_intervals_1based_inclusive: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata length_nt: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata removed_interval: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata completeness: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata dna_sequence_sha256: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata conventional_reference: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata conventional_retained_intervals_1based_inclusive: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata local_offset: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata offset_valid_only_in: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata rna_sequence_sha256: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata dna_fasta: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata rna_fasta: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata representation_relationship: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata junction_target_1based: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata E7_reference_interval: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata E7_target_interval: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata boundary_basis: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata splice_source: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata limitation: HPV16_E6E7_intron_retained_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata reference: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata strand: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata retained_intervals_1based_inclusive: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata length_nt: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata removed_interval: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata completeness: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata dna_sequence_sha256: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata conventional_reference: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata conventional_retained_intervals_1based_inclusive: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata local_offset: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata offset_valid_only_in: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata rna_sequence_sha256: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata dna_fasta: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata rna_fasta: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata representation_relationship: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata junction_target_1based: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata E7_reference_interval: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata E7_target_interval: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata boundary_basis: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata splice_source: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Metadata limitation: HPV16_E6starI_E7_spliced_region",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: status",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: reference_lengths",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: alignment",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: literature_junction",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: mapped_junction",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: intron_length",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: spliced_length",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: unspliced_length",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: junction_after_target_base",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: junction_context_DNA",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: E7_preserved",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: reference_accessions",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: genbank_origin_equals_fasta",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: genbank_cds_features",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: alignment_length_nt",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: alignment_plus_hits_1based",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: alignment_reverse_complement_hits_1based",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: local_offset",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: offset_scope",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: strand",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: removed_interval_1based_inclusive",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: retained_exon_lengths",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: junction_before_target_base",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: E7_length_nt",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: E7_stop_codon_DNA",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: DNA_RNA_relationship",
+      "passed": true
+    },
+    {
+      "check": "Builder validation independently confirmed: target_sequence_sha256",
+      "passed": true
+    },
+    {
+      "check": "Builder reference-file hash matches independently computed digest: NC_001526.4.fasta",
+      "passed": true
+    },
+    {
+      "check": "Builder reference-file hash matches independently computed digest: K02718.1.fasta",
+      "passed": true
+    },
+    {
+      "check": "Builder reference-file hash matches independently computed digest: NC_001526.4.gb",
+      "passed": true
+    }
+  ],
+  "raw_input_file_sha256": {
+    "HPV16_E6/ncbi_dataset/data/gene.fna": "7fa0e41336bc09f4b5b2215e0895e184d2b00d6e5115254a3f6d3b749b5f85c6",
+    "HPV16_E7/ncbi_dataset/data/gene.fna": "4b539a9b77845cda44c374c1eab0512e88881172bc9951c4aeae309cb83a6440",
+    "hpv_step2/reference/NC_001526.4.fasta": "ebf7834e615c60f819b2fed442ecf1c2fcf5eb52362edcba28f8f0730e407101",
+    "hpv_step2/reference/K02718.1.fasta": "b6d8d28326ad0b15f7c751307ede44248258277183f1e7c9cb11c67ad2b42995",
+    "hpv_step2/reference/NC_001526.4.gb": "282be442f226cc809fefbda616ac136b8d20dfde23fad09558f3f653a3de96a4"
+  },
+  "checks_passed": 171,
+  "checks_total": 171
+}

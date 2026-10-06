@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "validation_kind": "builder checks; run verify_targets.py for independent audit",
+  "reference_lengths": [
+    7906,
+    7904
+  ],
+  "reference_accessions": [
+    "NC_001526.4",
+    "K02718.1"
+  ],
+  "genbank_origin_equals_fasta": true,
+  "genbank_cds_features": [
+    [
+      "7125..7601",
+      "transforming protein E6"
+    ],
+    [
+      "join(7125..7268,7451..7459)",
+      "protein E6*"
+    ],
+    [
+      "7604..7900",
+      "transforming protein E7"
+    ]
+  ],
+  "alignment": "K02718.1:83-858 equals NC_001526.4:7125-7900 exactly (776/776 bases)",
+  "alignment_length_nt": 776,
+  "alignment_plus_hits_1based": [
+    7125
+  ],
+  "alignment_reverse_complement_hits_1based": [],
+  "uniqueness_search": "all overlapping starts on both strands, including circular origin",
+  "local_offset": 7042,
+  "offset_scope": "K02718.1:83-858 ONLY",
+  "strand": "+",
+  "literature_junction": "226|409",
+  "mapped_junction": "7268|7451",
+  "removed_interval_1based_inclusive": "7269-7450",
+  "intron_length": 182,
+  "spliced_length": 573,
+  "unspliced_length": 755,
+  "retained_exon_lengths": [
+    123,
+    450
+  ],
+  "junction_after_target_base": 123,
+  "junction_before_target_base": 124,
+  "junction_context_DNA": "CAGTTACTGCGACGTGAG|GTGTATTAACTGTCAAAAGC",
+  "splice_sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC1472016/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6459911/"
+  ],
+  "independent_support": "NCBI spliced CDS annotation and published deletion-construct sequence anchors",
+  "E7_preserved": true,
+  "E7_length_nt": 297,
+  "E7_stop_codon_DNA": "TAA",
+  "DNA_RNA_relationship": "same two targets; RNA alphabet replaces T with U",
+  "target_sequence_sha256": {
+    "HPV16_E6E7_intron_retained_region": {
+      "DNA": "0ff121295b914f17857727fce4c7700afe3bfb02b1cbefbfdb4da53686ce8e95",
+      "RNA": "9d6a0794c72836168bac407f12473990412300d9c324b88aff31fefa30c2d924"
+    },
+    "HPV16_E6starI_E7_spliced_region": {
+      "DNA": "d20bba2a580f9af14293371f9097a56aa10caa952314d8dc5059b96c05e9c392",
+      "RNA": "12e46e52dd426eb2b358137e96337bf85f0ac4a5a60059e184c76fcb5816b39f"
+    }
+  },
+  "reference_file_sha256": {
+    "K02718.1.fasta": "b6d8d28326ad0b15f7c751307ede44248258277183f1e7c9cb11c67ad2b42995",
+    "NC_001526.4.fasta": "ebf7834e615c60f819b2fed442ecf1c2fcf5eb52362edcba28f8f0730e407101",
+    "NC_001526.4.gb": "282be442f226cc809fefbda616ac136b8d20dfde23fad09558f3f653a3de96a4"
+  },
+  "limitations": [
+    "partial regions, not complete transcript boundaries",
+    "no binding or suppression evidence",
+    "no Step 3 analysis"
+  ]
+}

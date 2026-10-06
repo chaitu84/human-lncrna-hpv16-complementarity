@@ -1,0 +1,37 @@
+{
+    "status":  "PASS",
+    "verification_date_America_New_York":  "2026-10-05",
+    "method":  "Fresh NCBI EFetch response compared byte-for-byte as UTF-8 and exact text; included raw inputs were not overwritten.",
+    "records":  [
+                    {
+                        "file":  "reference/NC_001526.4.fasta",
+                        "accession":  "NC_001526.4",
+                        "url":  "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore\u0026id=NC_001526.4\u0026rettype=fasta\u0026retmode=text",
+                        "retrieved_utc":  "2026-10-06T03:20:38.2177551Z",
+                        "http_status":  200,
+                        "exact_text_equal":  true,
+                        "local_file_sha256":  "ebf7834e615c60f819b2fed442ecf1c2fcf5eb52362edcba28f8f0730e407101",
+                        "remote_utf8_sha256":  "ebf7834e615c60f819b2fed442ecf1c2fcf5eb52362edcba28f8f0730e407101"
+                    },
+                    {
+                        "file":  "reference/K02718.1.fasta",
+                        "accession":  "K02718.1",
+                        "url":  "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore\u0026id=K02718.1\u0026rettype=fasta\u0026retmode=text",
+                        "retrieved_utc":  "2026-10-06T03:20:38.9889586Z",
+                        "http_status":  200,
+                        "exact_text_equal":  true,
+                        "local_file_sha256":  "b6d8d28326ad0b15f7c751307ede44248258277183f1e7c9cb11c67ad2b42995",
+                        "remote_utf8_sha256":  "b6d8d28326ad0b15f7c751307ede44248258277183f1e7c9cb11c67ad2b42995"
+                    },
+                    {
+                        "file":  "reference/NC_001526.4.gb",
+                        "accession":  "NC_001526.4",
+                        "url":  "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore\u0026id=NC_001526.4\u0026rettype=gbwithparts\u0026retmode=text",
+                        "retrieved_utc":  "2026-10-06T03:20:40.0199307Z",
+                        "http_status":  200,
+                        "exact_text_equal":  true,
+                        "local_file_sha256":  "282be442f226cc809fefbda616ac136b8d20dfde23fad09558f3f653a3de96a4",
+                        "remote_utf8_sha256":  "282be442f226cc809fefbda616ac136b8d20dfde23fad09558f3f653a3de96a4"
+                    }
+                ]
+}

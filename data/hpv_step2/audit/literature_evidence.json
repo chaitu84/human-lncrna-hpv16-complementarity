@@ -1,0 +1,46 @@
+{
+    "status":  "PASS",
+    "method":  "Direct HTTPS retrieval of primary-source PMC HTML and exact checks of the specified coordinate/anchor text, with manual reading of the construct description.",
+    "figure8_image_visually_verified":  false,
+    "limitations":  [
+                        "The selected 104-858 region is an analysis boundary choice, not a measured complete transcript.",
+                        "Literature checks establish splice and boundary evidence, not binding or suppression."
+                    ],
+    "records":  [
+                    {
+                        "article":  "Tang_2006",
+                        "url":  "https://pmc.ncbi.nlm.nih.gov/articles/PMC1472016/",
+                        "section":  "Materials and Methods: Plasmid construction and 293 transfection",
+                        "retrieved_utc":  "2026-10-06T03:30:52.9752767Z",
+                        "http_status":  200,
+                        "required_text_checks":  "PASS",
+                        "findings":  [
+                                         "E6*I cDNA construct covers conventional 104-855 with 227-408 absent.",
+                                         "Retained 226|409 and deletion length 182 are inferred by inclusive-coordinate arithmetic.",
+                                         "Tags in the paper are not included in the reference-derived targets."
+                                     ]
+                    },
+                    {
+                        "article":  "Paget_Bailly_2019",
+                        "url":  "https://pmc.ncbi.nlm.nih.gov/articles/PMC6459911/",
+                        "section":  "Materials and Methods: Plasmids, transient and stable transfections",
+                        "retrieved_utc":  "2026-10-06T03:30:54.4922927Z",
+                        "http_status":  200,
+                        "required_text_checks":  "PASS",
+                        "findings":  [
+                                         "Published construct anchors match the sequence immediately beside the mapped junction."
+                                     ]
+                    },
+                    {
+                        "article":  "Stacey_2000",
+                        "url":  "https://pmc.ncbi.nlm.nih.gov/articles/PMC112249/",
+                        "section":  "Results: The short E6 5-prime UTR is fully efficient in supporting initiation at the E6 AUG",
+                        "retrieved_utc":  "2026-10-06T03:30:55.7932482Z",
+                        "http_status":  200,
+                        "required_text_checks":  "PASS",
+                        "findings":  [
+                                         "The article explicitly identifies conventional position 104 as the E6 start codon."
+                                     ]
+                    }
+                ]
+}
