@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from config_code.read import main as run_data_checks
 
 
