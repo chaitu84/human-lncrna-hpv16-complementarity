@@ -64,9 +64,11 @@ def process_fasta(records: list):
 
 
 def main():
-    data_folder = Path(
-        r"C:\Users\chait\Downloads\BINF\BINF_2111\data"
-    )
+    # Find the main project folder automatically.
+    project_folder = Path(__file__).resolve().parents[2]
+
+    # Find the data folder inside the project.
+    data_folder = project_folder / "data"
 
     output_folder = data_folder.parent / "results"
     output_folder.mkdir(parents=True, exist_ok=True)
