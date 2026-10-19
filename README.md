@@ -59,4 +59,5 @@ The project only looks at **computational evidence**. Experimental validation, c
 |---|---|---|
 | Jacky | Computer Science | Coder |
 | Arnav | Data Science | Researcher |
-| Cleo
+| Cleo. | Computer | Coder |
+| Ekijah| Mathematics & Economics | Researcher |
