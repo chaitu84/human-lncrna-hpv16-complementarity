@@ -14,7 +14,9 @@ import re
 import sys
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = ROOT.parents[2]
+DATA_ROOT = REPOSITORY_ROOT / "data"
 REPORT = ROOT / "audit" / "independent_validation.json"
 CHECKS = []
 RAW_HASHES = {}
@@ -29,7 +31,7 @@ def check(condition, description):
 
 def raw_hash(path):
     digest = hashlib.sha256(path.read_bytes()).hexdigest()
-    RAW_HASHES[path.relative_to(ROOT.parent).as_posix()] = digest
+    RAW_HASHES[path.relative_to(REPOSITORY_ROOT).as_posix()] = digest
     return digest
 
 
@@ -182,14 +184,14 @@ def audit():
 
     originals = {}
     for gene, first, last in (("E6", 7125, 7601), ("E7", 7604, 7900)):
-        path = ROOT.parent / f"HPV16_{gene}" / "ncbi_dataset" / "data" / "gene.fna"
+        path = DATA_ROOT / f"HPV16_{gene}" / "ncbi_dataset" / "data" / "gene.fna"
         header, sequence = read_fasta(path, "ACGT")
         check(header.split()[0] == f"NC_001526.4:{first}-{last}"
               and header.split()[1] == gene,
               f"Original {gene} accession, gene name and coordinates")
         check(sequence == by_coordinates(reference, first, last),
               f"Original {gene} equals independently enumerated reference interval")
-        originals[gene] = {"path": path.relative_to(ROOT.parent).as_posix(),
+        originals[gene] = {"path": path.relative_to(REPOSITORY_ROOT).as_posix(),
                            "length_nt": len(sequence), "raw_file_sha256": raw_hash(path)}
 
     e7 = by_coordinates(reference, 7604, 7900)
@@ -256,7 +258,7 @@ def audit():
     check(context == "CAGTTACTGCGACGTGAG|GTGTATTAACTGTCAAAAGC",
           "Spliced junction sequence context")
 
-    with (ROOT / "target_metadata.csv").open(encoding="utf-8", newline="") as handle:
+    with (ROOT / "targets/target_metadata.csv").open(encoding="utf-8", newline="") as handle:
         rows = list(csv.DictReader(handle))
     check(len(rows) == 2 and {row["target"] for row in rows} == set(expected),
           "Metadata contains exactly the two biological targets")
@@ -287,7 +289,7 @@ def audit():
         for key, value in values.items():
             check(row.get(key) == value, f"Metadata {key}: {name}")
 
-    builder_validation = json.loads((ROOT / "validation.json").read_text(encoding="utf-8"))
+    builder_validation = json.loads((ROOT / "audit/validation.json").read_text(encoding="utf-8"))
     validation_values = {
         "status": "PASS", "reference_lengths": [7906, 7904],
         "alignment": "K02718.1:83-858 equals NC_001526.4:7125-7900 exactly (776/776 bases)",

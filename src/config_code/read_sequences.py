@@ -1,7 +1,7 @@
 from Bio import SeqIO
 
 
-def read_fasta(filename):  # filename is a placeholder
+def read_fasta(filename):
     sequences = []
 
     for record in SeqIO.parse(filename, "fasta"):

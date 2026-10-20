@@ -74,20 +74,20 @@ The builder and independent audit both pass. The verifier constructs expected se
 
 ## Reproduce within this repository
 
-The package remains under `BINF_2111/data/hpv_step2/`; original inputs remain under `data/HPV16_E6/` and `data/HPV16_E7/`. Both scripts use Python's standard library (Python 3.10 or newer) and require no network or third-party packages. The builder writes its own four target FASTAs, metadata, and validation report. The verifier reads these and writes only its independent audit report.
+The package remains under `BINF_2111/src/config_code/hpv_step2/`; original inputs remain under `data/HPV16_E6/` and `data/HPV16_E7/`. Both scripts use Python's standard library (Python 3.10 or newer) and require no network or third-party packages. The builder writes its own four target FASTAs, metadata, and validation report. The verifier reads these and writes only its independent audit report.
 
 Exact commands tested in PowerShell from `C:\Users\chait\Downloads\BINF\BINF_2111`:
 
 ```powershell
-& 'C:\Users\chait\AppData\Local\Programs\Python\Python313\python.exe' data/hpv_step2/scripts/build_targets.py
-& 'C:\Users\chait\AppData\Local\Programs\Python\Python313\python.exe' data/hpv_step2/scripts/verify_targets.py
+& 'C:\Users\chait\AppData\Local\Programs\Python\Python313\python.exe' src/config_code/hpv_step2/scripts/build_targets.py
+& 'C:\Users\chait\AppData\Local\Programs\Python\Python313\python.exe' src/config_code/hpv_step2/scripts/verify_targets.py
 ```
 
 This environment has Python **3.13.5** at that path; `python` is absent from PATH and `py -3` does not find the installed interpreter. On another machine with Python configured, the equivalent commands from the repository root are:
 
 ```bash
-python data/hpv_step2/scripts/build_targets.py
-python data/hpv_step2/scripts/verify_targets.py
+python src/config_code/hpv_step2/scripts/build_targets.py
+python src/config_code/hpv_step2/scripts/verify_targets.py
 ```
 
 For an inclusive biological interval `a..b`, Python uses `genome[a-1:b]`: subtract one from the start and keep the inclusive end as the exclusive slice endpoint. The actual target slices are:
@@ -117,4 +117,6 @@ The targets represent one HPV16 reference and one published splice event. They d
 
 ## Folder organization
 
-The package root now contains a short [README](../README.md). Python scripts live in `scripts/`, target metadata lives beside the FASTAs in `targets/`, and the builder validation report lives with the other reports in `audit/`. This document preserves the detailed Step 2 evidence. The scripts and reproduction commands use the new paths; the scientific target definitions and sequence files are unchanged. Original inputs and unrelated repository files were not moved.
+The package is located in `src/config_code/hpv_step2/`. Python scripts live in `scripts/`, target metadata lives beside the FASTAs in `targets/`, and the builder validation report lives with the other reports in `audit/`. This document preserves the detailed Step 2 evidence. The scripts and reproduction commands use the new paths; the scientific target definitions and sequence files are unchanged. Original inputs and unrelated repository files were not moved.
+
+The Step 2 folder was moved out of `data/` into `src/config_code/`. Package references and outputs resolve relative to the Step 2 folder; the verifier locates the repository root and reads the original E6/E7 files from `data/HPV16_E6/` and `data/HPV16_E7/`. These file paths were updated; Python imports and neighboring reader scripts did not need changes.

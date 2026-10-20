@@ -1,3 +1,4 @@
-
 /data/gencode.v50.transcripts.fa.gz
 results/
+__pycache__/
+*.pyc

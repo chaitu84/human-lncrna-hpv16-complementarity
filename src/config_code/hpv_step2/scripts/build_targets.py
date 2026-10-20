@@ -5,7 +5,7 @@ import hashlib
 import json
 import re
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 TANG_URL = 'https://pmc.ncbi.nlm.nih.gov/articles/PMC1472016/'
 ANCHOR_URL = 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6459911/'
 
@@ -157,7 +157,7 @@ def main():
                          boundary_basis='paper start 104; native E7 stop through 858',
                          splice_source=TANG_URL,
                          limitation='reference-derived partial region; transcript ends and binding not established'))
-    with (ROOT / 'target_metadata.csv').open('w', newline='', encoding='utf-8') as f:
+    with (ROOT / 'targets/target_metadata.csv').open('w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
@@ -184,7 +184,8 @@ def main():
                                          sorted((ROOT / 'reference').iterdir()) if p.is_file()},
                   limitations=['partial regions, not complete transcript boundaries',
                                'no binding or suppression evidence', 'no Step 3 analysis'])
-    (ROOT / 'validation.json').write_text(json.dumps(checks, indent=2) + '\n', encoding='utf-8', newline='\n')
+    (ROOT / 'audit').mkdir(exist_ok=True)
+    (ROOT / 'audit/validation.json').write_text(json.dumps(checks, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps(checks, indent=2))
 
 

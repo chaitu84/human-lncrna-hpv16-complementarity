@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "verified_at_utc": "2026-10-06T03:35:04.109773+00:00",
+  "verified_at_utc": "2026-10-07T01:29:15.648911+00:00",
   "offline": true,
   "independent_of_builder": true,
   "method": "Standalone standard-library verifier; 1-based coordinate enumeration; no builder import",
@@ -55,12 +55,12 @@
   },
   "original_inputs": {
     "E6": {
-      "path": "HPV16_E6/ncbi_dataset/data/gene.fna",
+      "path": "data/HPV16_E6/ncbi_dataset/data/gene.fna",
       "length_nt": 477,
       "raw_file_sha256": "7fa0e41336bc09f4b5b2215e0895e184d2b00d6e5115254a3f6d3b749b5f85c6"
     },
     "E7": {
-      "path": "HPV16_E7/ncbi_dataset/data/gene.fna",
+      "path": "data/HPV16_E7/ncbi_dataset/data/gene.fna",
       "length_nt": 297,
       "raw_file_sha256": "4b539a9b77845cda44c374c1eab0512e88881172bc9951c4aeae309cb83a6440"
     }
@@ -785,11 +785,11 @@
     }
   ],
   "raw_input_file_sha256": {
-    "HPV16_E6/ncbi_dataset/data/gene.fna": "7fa0e41336bc09f4b5b2215e0895e184d2b00d6e5115254a3f6d3b749b5f85c6",
-    "HPV16_E7/ncbi_dataset/data/gene.fna": "4b539a9b77845cda44c374c1eab0512e88881172bc9951c4aeae309cb83a6440",
-    "hpv_step2/reference/NC_001526.4.fasta": "ebf7834e615c60f819b2fed442ecf1c2fcf5eb52362edcba28f8f0730e407101",
-    "hpv_step2/reference/K02718.1.fasta": "b6d8d28326ad0b15f7c751307ede44248258277183f1e7c9cb11c67ad2b42995",
-    "hpv_step2/reference/NC_001526.4.gb": "282be442f226cc809fefbda616ac136b8d20dfde23fad09558f3f653a3de96a4"
+    "data/HPV16_E6/ncbi_dataset/data/gene.fna": "7fa0e41336bc09f4b5b2215e0895e184d2b00d6e5115254a3f6d3b749b5f85c6",
+    "data/HPV16_E7/ncbi_dataset/data/gene.fna": "4b539a9b77845cda44c374c1eab0512e88881172bc9951c4aeae309cb83a6440",
+    "src/config_code/hpv_step2/reference/NC_001526.4.fasta": "ebf7834e615c60f819b2fed442ecf1c2fcf5eb52362edcba28f8f0730e407101",
+    "src/config_code/hpv_step2/reference/K02718.1.fasta": "b6d8d28326ad0b15f7c751307ede44248258277183f1e7c9cb11c67ad2b42995",
+    "src/config_code/hpv_step2/reference/NC_001526.4.gb": "282be442f226cc809fefbda616ac136b8d20dfde23fad09558f3f653a3de96a4"
   },
   "checks_passed": 171,
   "checks_total": 171
