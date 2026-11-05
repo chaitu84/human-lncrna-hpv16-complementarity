@@ -1,5 +1,5 @@
 # Theoretical Therapeutic Discovery: HPV RNA Analysis
-BY J.A.C.E
+BY J.A.C.E (Joint Attachment for Carcinoma Eradication)
 
 ## Overview
 
