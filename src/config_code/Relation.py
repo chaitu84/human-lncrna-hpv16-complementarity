@@ -1,4 +1,5 @@
 from Bio import SeqIO
+from Bio.Seq import Seq
 import pandas as pd
 
 def find_matches(hpv_sequence, human_sequence, match_length=10):
