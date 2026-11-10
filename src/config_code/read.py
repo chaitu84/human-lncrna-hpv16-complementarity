@@ -94,14 +94,15 @@ def main():
     ]
 
     for input_path, output_name in file_pairs:
-        print(f"\nReading: {input_path}")
+        if not input_path.is_file():
+            print(f"Skipping missing file: {input_path}")
+            continue
 
+        print(f"\nReading: {input_path}")
         records = check_fasta(input_path)
         db = process_fasta(records)
-
         output_path = output_folder / output_name
         db.to_csv(output_path, index=False)
-
         print(f"Saved {len(db):,} records to {output_path}")
 
         # Free memory before reading the next file.
