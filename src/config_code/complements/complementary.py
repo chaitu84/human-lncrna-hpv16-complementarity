@@ -39,9 +39,7 @@ def find_matches(query: str, human_sequence: str) -> list[int]:
 
 
 def main():
-    project = Path(
-        "C:/Users/chait/Downloads/BINF/BINF_2111"
-    )
+    project = Path(__file__).resolve().parents[3]
 
     viral_path = (
         project
